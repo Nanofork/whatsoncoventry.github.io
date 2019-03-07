@@ -15,7 +15,7 @@ app.use(handlebars({ paths: { views: `${__dirname}/views` } }))
 app.use(stat('assets'))
 app.use(router.routes())
 
-const port = 8080
+const port = 3000
 
 router.get('/', async ctx => {
 	try {
