@@ -15,7 +15,7 @@ app.use(handlebars({ paths: { views: `${__dirname}/views` } }))
 app.use(stat('assets'))
 app.use(router.routes())
 
-const port = 3000
+const PORT = process.env.PORT || 3000;
 
 router.get('/', async ctx => {
 	try {
@@ -49,4 +49,4 @@ router.get('/generic', async ctx => {
 	}
 })
 
-module.exports = app.listen(port, () => console.log(`listening on port ${port}`))
+module.exports = app.listen(PORT, () => console.log(`listening on port ${ PORT }`))
